@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TEXT STYLE</title>
+        <style>
+               body{
+                       background: black;
+                       display: flex;
+                       flex-direction: column;
+                       justify-content: center;
+                       align-items: center;
+               }
+             
+                      p{
+                      
+                       text-align: center;
+                       font-size: 35px;
+                       padding: 0px;
+                       background: linear-gradient( to right,red,orange,blue);
+                       background-clip: text;
+                       -webkit-background-clip: text;
+                       color:    transparent;
+                 
+                 animation: tstyle 1s infinite linear;
+                
+               }
+               
+               @keyframes tstyle{
+                       0%{
+                               
+                       }
+                       50%{
+                               background:linear-gradient( to right,blue,red,orange);
+                       -webkit-background-clip: text;
+                         color:transparent;
+                       }
+                       100%{
+                               background:linear-gradient( to right,orange,blue,blue);
+                               -webkit-background-clip: text;
+                       color:    transparent;
+                 
+                       }
+               }
+               
+               button{
+                       border: 3px solid purple;
+                       border-radius: 2px;
+                       padding: 10px 40px;
+                       background: transparent;
+                       color: deeppink;
+                       font-weight: bolder;
+                       animation: bordbox 4s infinite ease-in-out;
+                      margin: 10px;
+                      
+               }
+               
+  @keyframes bordbox{
+          0%{  
+                  border: 3px solid purple;
+                  
+          }
+          20%{ 
+                  border: 3px solid red; 
+                  
+          }
+          40%{ 
+                  border: 3px solid blue;
+                  }
+          60%{ 
+                  border: 3px solid orangered; 
+                  
+          }
+          80%{  
+                  border: 3px solid purple; 
+                  
+          }
+          100%{ 
+                  border: 3px solid deeppink; 
+                  
+          }
+  }             
+               
+        </style>
+        
+</head>
+<body>
+           <p id="textbox"> DEVERLOPER MANOJ</p>
+<button type="submit" onclick="inp()"> YOUR NAME</button>
+   
+<script>
+        function inp(){
+          let user = prompt("TYPE YOUR NAME HERE");
+          let inval = document.getElementById('textbox');       
+          user= user.toUpperCase()
+                inval.innerHTML= user;
+        if(user==false){
+          user= user.toUpperCase()
+                inval.innerHTML= "DEVERLOPER MANOJ";
+       }
+      }
+</script>
+
+
+</body>
+<html>
+
+<!-- 100% code by developer manoj -->
